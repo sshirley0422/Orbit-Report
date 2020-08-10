@@ -9,9 +9,10 @@
    </tr>
     <tr *ngFor="let satalitte of satellites">
         <td>{{satalitte.name}}</td>
-        <td>{{satalitte.type}}</td>
+        <td [class.warning]="satalitte.shouldShowWarning()">{{satalitte.type}}</td>
         <td>{{satalitte.operational}}</td>
         <td>{{satalitte.orbitType}}</td>
         <td>{{satalitte.launchDate}}</td>
     </tr> 
 </table>
+
